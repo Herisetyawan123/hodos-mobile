@@ -23,8 +23,9 @@ class BtnMenu extends StatelessWidget {
         ),
         child: Center(
           child: Icon(
-            Icons.arrow_back_ios_new,
+            Icons.menu,
             color: MyTheme.primary.blue,
+            size: 30,
           ),
         ),
       ),
