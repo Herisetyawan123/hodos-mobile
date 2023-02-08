@@ -23,8 +23,10 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: MyTheme.container(
-        content: pages[number],
+      body: SingleChildScrollView(
+        child: MyTheme.container(
+          content: pages[number],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: number,
