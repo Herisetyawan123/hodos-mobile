@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hodos/src/pages/main/screens/home/home_screen.dart';
+import 'package:hodos/src/pages/main/screens/tasks/task_screen.dart';
 
 import '../../constants/theme.dart';
 
@@ -15,7 +16,7 @@ class _MainPageState extends State<MainPage> {
 
   List<Widget> pages = const [
     HomeScreen(),
-    Text("Task"),
+    TaskScreens(),
     Text("Schedule"),
     Text("Profile"),
   ];
