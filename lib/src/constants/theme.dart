@@ -12,6 +12,7 @@ class MyTheme {
   // static const String purple = 'purple';
   // static const String green = 'green';
   static Color sec = const Color(0xFFA0A0A0);
+  static Color bg = const Color(0xFFf8fafb);
 
   static TextModel text = TextModel(
     textSecondary: GoogleFonts.poppins(color: const Color(0xFFA0A0A0)),
