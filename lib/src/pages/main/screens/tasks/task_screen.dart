@@ -3,8 +3,8 @@ import 'package:hodos/src/constants/theme.dart';
 
 import '../widget/floating_btn.dart';
 
-class TaskScreens extends StatelessWidget {
-  const TaskScreens({Key? key}) : super(key: key);
+class TaskScreen extends StatelessWidget {
+  const TaskScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
