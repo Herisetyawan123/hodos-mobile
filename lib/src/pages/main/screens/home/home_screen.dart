@@ -9,75 +9,79 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const BtnMenu(),
-        MyTheme.spaceH(25),
-        Text(
-          "Sugeng Dalu, Heri!",
-          style: MyTheme.heading1.copyWith(
-            fontWeight: FontWeight.bold,
-            color: MyTheme.primary.blue,
-          ),
-        ),
-        MyTheme.spaceH(8),
-        Text(
-          "Sampean dinten niki gadah 3 tugas",
-          style: MyTheme.heading5.copyWith(
-            fontWeight: FontWeight.w500,
-            color: MyTheme.sec,
-          ),
-        ),
-        MyTheme.spaceH(40),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return SingleChildScrollView(
+      child: MyTheme.container(
+        content: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const BtnMenu(),
+            MyTheme.spaceH(25),
             Text(
-              "Category",
-              style: MyTheme.heading4.copyWith(
-                fontWeight: FontWeight.w600,
+              "Sugeng Dalu, Heri!",
+              style: MyTheme.heading1.copyWith(
+                fontWeight: FontWeight.bold,
+                color: MyTheme.primary.blue,
               ),
             ),
+            MyTheme.spaceH(8),
             Text(
-              "See all >>",
+              "Sampean dinten niki gadah 3 tugas",
               style: MyTheme.heading5.copyWith(
-                  fontWeight: FontWeight.w600, color: MyTheme.primary.blue),
+                fontWeight: FontWeight.w500,
+                color: MyTheme.sec,
+              ),
             ),
+            MyTheme.spaceH(40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Category",
+                  style: MyTheme.heading4.copyWith(
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                Text(
+                  "See all >>",
+                  style: MyTheme.heading5.copyWith(
+                      fontWeight: FontWeight.w600, color: MyTheme.primary.blue),
+                ),
+              ],
+            ),
+            MyTheme.spaceH(20),
+            CarouselSlider(
+              disableGesture: true,
+              items: [1, 2, 3, 4].map((e) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    return const BoxCategory();
+                  },
+                );
+              }).toList(),
+              options: CarouselOptions(
+                enableInfiniteScroll: false,
+                height: 180,
+                padEnds: false,
+                enlargeCenterPage: false,
+                disableCenter: true,
+                // viewportFraction: 16 ,
+              ),
+            ),
+            MyTheme.spaceH(20),
+            Text(
+              "Jadwal dinten niki",
+              style: MyTheme.heading4.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            MyTheme.spaceH(20),
+            const BoxTask(),
+            const BoxTask(),
+            const BoxTask(),
+            // const BoxTask()
           ],
         ),
-        MyTheme.spaceH(20),
-        CarouselSlider(
-          disableGesture: true,
-          items: [1, 2, 3, 4].map((e) {
-            return Builder(
-              builder: (BuildContext context) {
-                return const BoxCategory();
-              },
-            );
-          }).toList(),
-          options: CarouselOptions(
-            enableInfiniteScroll: false,
-            height: 180,
-            padEnds: false,
-            enlargeCenterPage: false,
-            disableCenter: true,
-            // viewportFraction: 16 ,
-          ),
-        ),
-        MyTheme.spaceH(20),
-        Text(
-          "Jadwal dinten niki",
-          style: MyTheme.heading4.copyWith(
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        MyTheme.spaceH(20),
-        const BoxTask(),
-        const BoxTask(),
-        const BoxTask(),
-        // const BoxTask()
-      ],
+      ),
     );
   }
 }

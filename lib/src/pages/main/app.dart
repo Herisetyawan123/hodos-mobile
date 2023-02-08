@@ -24,11 +24,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: MyTheme.container(
-          content: pages[number],
-        ),
-      ),
+      body: pages[number],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: number,
         type: BottomNavigationBarType.fixed,
