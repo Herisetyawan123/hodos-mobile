@@ -17,8 +17,8 @@ class SignUpPage extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: MyTheme.container(
-          height: height,
-          width: width,
+          // height: height,
+          // width: width,
           content: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
