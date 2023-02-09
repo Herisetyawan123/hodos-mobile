@@ -28,6 +28,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: pages[number],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
         currentIndex: number,
         type: BottomNavigationBarType.fixed,
         showUnselectedLabels: false,
