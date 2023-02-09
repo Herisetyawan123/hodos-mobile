@@ -25,10 +25,11 @@ class BoxProfile extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(
-              0.25,
+              0.15,
             ),
-            offset: const Offset(5, 5),
-            blurRadius: 100,
+            spreadRadius: -10,
+            offset: const Offset(1, 1),
+            blurRadius: 10,
           )
         ],
       ),
